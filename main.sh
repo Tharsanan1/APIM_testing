@@ -1,3 +1,8 @@
+#!/bin/bash
+workingdir=$(pwd)
+reldir=`dirname $0`
+cd $reldir
+
 echo "Hellov : ${HOST_NAME}"
 
 kubectl get pods -l product=apim -n="${kubernetes_namespace}"  -o custom-columns=:metadata.name > podNames.txt
@@ -55,6 +60,9 @@ for filename in logs/*; do
     done <<< $(cat "$filename")
 done
 
-curl --insecure --fail -i -H "Host: am.wso2.com" "https://${HOST_NAME}/publisher/"
-curl --insecure --fail -i -H "Host: am.wso2.com" "https://${HOST_NAME}/publisher/"
+# curl --insecure --fail -i -H "Host: am.wso2.com" "https://${HOST_NAME}/publisher/"
+# curl --insecure --fail -i -H "Host: am.wso2.com" "https://${HOST_NAME}/publisher/"
+
+
+cd "$workingdir"
 

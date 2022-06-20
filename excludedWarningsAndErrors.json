@@ -1,7 +1,7 @@
 [
     "^.*Digester Match .* failed to set property .* to .*$",
     "^.*ApplicationManagementServiceComponent Templates directory not found at .*$",
-    "SSLUtilBase The trusted certificate with alias .* and DN .* is not valid due to .*. Certificates signed by this trusted certificate WILL be accepted",
+    "^.*SSLUtilBase The trusted certificate with alias .* and DN .* is not valid due to .*. Certificates signed by this trusted certificate WILL be accepted.*$",
     "^.*GlobalThrowableMapper An unknown exception has been captured by the global exception mapper.*$",
     "^.*KeyManagerConfigurationDataRetriever Failed retrieving Key Manager Configurations from remote endpoint. Retrying after .*$",
     "^.*GlobalThrowableMapper No API Artifacts.*$"
