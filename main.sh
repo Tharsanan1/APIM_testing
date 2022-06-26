@@ -62,13 +62,14 @@ done
 
 # curl --insecure --fail -i -H "Host: am.wso2.com" "https://${HOST_NAME}/publisher/"
 # curl --insecure --fail -i -H "Host: am.wso2.com" "https://${HOST_NAME}/publisher/"
-
-mkdir -p ../../output/
-mkdir -p ../../output/jmeter-results
-rm -f ../../output/jmeter.log
-rm -f -r ../../output/jmeter-results
-jmeter -n -t APIM-jmeter-test.jmx -Jhost="${HOST_NAME}" -l ../../output/jmeter.log -e -o ../../output/jmeter-results > jmeter-runtime.log
-cp jmeter-runtime.log ../../output/jmeter-results/
+outputFolderpath="../../../output"
+jmeterResultPath="$outputFolderpath/jmeter-results"
+mkdir -p "$outputFolderpath"
+mkdir -p "$jmeterResultPath"
+rm -f "$outputFolderpath/jmeter.log"
+rm -f -r "$jmeterResultPath"
+jmeter -n -t APIM-jmeter-test.jmx -Jhost="${HOST_NAME}" -l "$outputFolderpath/jmeter.log" -e -o "$jmeterResultPath" > jmeter-runtime.log
+cp jmeter-runtime.log "$jmeterResultPath"
 greppedOutput=$(cat jmeter-runtime.log | grep "end of run" | wc -l)
 if [[ "$greppedOutput" == "0" ]]
 then
