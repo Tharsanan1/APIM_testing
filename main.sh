@@ -64,14 +64,13 @@ done
 # curl --insecure --fail -i -H "Host: am.wso2.com" "https://${HOST_NAME}/publisher/"
 outputFolderpath="../../../output"
 jmeterResultPath="$outputFolderpath/jmeter-results"
-mkdir -p "$outputFolderpath"
-mkdir -p "$jmeterResultPath"
 rm -f "$outputFolderpath/jmeter.log"
 rm -f -r "$jmeterResultPath"
+mkdir -p "$outputFolderpath"
+mkdir -p "$jmeterResultPath"
 jmeter -n -t APIM-jmeter-test.jmx -Jhost="${HOST_NAME}" -l "$outputFolderpath/jmeter.log" -e -o "$jmeterResultPath" > jmeter-runtime.log
 cp jmeter-runtime.log "$jmeterResultPath"
 greppedOutput=$(cat jmeter-runtime.log | grep "end of run" | wc -l)
-ls "debug files : $outputFolderpath"
 if [[ "$greppedOutput" == "0" ]]
 then
     echo "Could not start jmeter tests."
