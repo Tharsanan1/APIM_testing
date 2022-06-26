@@ -71,6 +71,7 @@ rm -f -r "$jmeterResultPath"
 jmeter -n -t APIM-jmeter-test.jmx -Jhost="${HOST_NAME}" -l "$outputFolderpath/jmeter.log" -e -o "$jmeterResultPath" > jmeter-runtime.log
 cp jmeter-runtime.log "$jmeterResultPath"
 greppedOutput=$(cat jmeter-runtime.log | grep "end of run" | wc -l)
+ls "debug files : $outputFolderpath"
 if [[ "$greppedOutput" == "0" ]]
 then
     echo "Could not start jmeter tests."
