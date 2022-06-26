@@ -13,5 +13,6 @@
   "^.*IdentityEventServiceComponent Properties for userPostSelfRegistration is not configured. This event handler will not be activated.*$",
   "^.*ReservedUserCreationObserver Error occurred while getting the realm configuration, User store properties might not be returned.*$",
   "^.*JDBCAuthorizationManager .* is already added to the .*$",
-  "^.*ApiMgtDAO Application Policy .* in tenant domain - .* is already persisted.*$"
+  "^.*ApiMgtDAO Application Policy .* in tenant domain - .* is already persisted.*$",
+  "^.*DefaultClaimMetadataStore Error while adding claim dialect http://wso2.org/claims.*$"
 ]
