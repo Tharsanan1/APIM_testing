@@ -11,5 +11,6 @@
   "^.*DataEndpointConnectionWorker Error while trying to connect to the endpoint. Cannot borrow client for .*$",
   "^.*RegistryConfigurationProcessor Could not find the handler class .*. This handler will not be registered. All handler and filter classes should be in the class path of the Registry.*$",
   "^.*IdentityEventServiceComponent Properties for userPostSelfRegistration is not configured. This event handler will not be activated.*$",
-  "^.*ReservedUserCreationObserver Error occurred while getting the realm configuration, User store properties might not be returned.*$"
+  "^.*ReservedUserCreationObserver Error occurred while getting the realm configuration, User store properties might not be returned.*$",
+  "^.*JDBCAuthorizationManager .* is already added to the .*$"
 ]
