@@ -12,5 +12,6 @@
   "^.*RegistryConfigurationProcessor Could not find the handler class .*. This handler will not be registered. All handler and filter classes should be in the class path of the Registry.*$",
   "^.*IdentityEventServiceComponent Properties for userPostSelfRegistration is not configured. This event handler will not be activated.*$",
   "^.*ReservedUserCreationObserver Error occurred while getting the realm configuration, User store properties might not be returned.*$",
-  "^.*JDBCAuthorizationManager .* is already added to the .*$"
+  "^.*JDBCAuthorizationManager .* is already added to the .*$",
+  "^.*ApiMgtDAO Application Policy .* in tenant domain - .* is already persisted.*$"
 ]
