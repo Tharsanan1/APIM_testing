@@ -31,7 +31,7 @@ flag="false"
 for filename in logs/*; do
     while read line;
     do
-        if [[ "$line" =~ $warningPattern || "$line" =~ $errorPattern ]];
+        if [[ "$line" =~ $errorPattern ]];#"$line" =~ $warningPattern || "$line" =~ $errorPattern ]];
         then 
             flag="true"
             match=${BASH_REMATCH[1]}
