@@ -14,5 +14,6 @@
   "^.*ReservedUserCreationObserver Error occurred while getting the realm configuration, User store properties might not be returned.*$",
   "^.*JDBCAuthorizationManager .* is already added to the .*$",
   "^.*ApiMgtDAO Application Policy .* in tenant domain - .* is already persisted.*$",
-  "^.*DefaultClaimMetadataStore Error while adding claim dialect http://wso2.org/claims.*$"
+  "^.*DefaultClaimMetadataStore Error while adding claim dialect http://wso2.org/claims.*$",
+  "^.*$"
 ]
